@@ -111,9 +111,9 @@ body{background:var(--bg);color:var(--text);font-family:'Nunito',sans-serif}
 .legend-card{background:var(--panel);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin-top:6px}
 .lc-head{padding:14px 16px 12px;background:linear-gradient(135deg,rgba(14,165,233,.18),rgba(56,189,248,.06))}
 .lc-num{font-family:'Orbitron',sans-serif;font-size:9px;letter-spacing:3px;color:var(--muted);margin-bottom:3px}
-.lc-title{font-family:'Orbitron',sans-serif;font-size:18px;font-weight:900;color:#fff;margin-bottom:6px}
+.lc-title{font-family:'Orbitron',sans-serif;font-size:22px;font-weight:900;color:#fff;margin-bottom:8px}
 .lc-subj{display:inline-flex;align-items:center;gap:5px;background:rgba(56,189,248,.1);border:1px solid rgba(56,189,248,.25);border-radius:20px;padding:2px 10px;font-size:9px;color:var(--a);font-weight:700;letter-spacing:1px}
-.lc-story{padding:14px 16px;font-size:13px;line-height:1.8;color:var(--text);font-style:italic;border-top:1px solid var(--border);background:rgba(56,189,248,.03)}
+.lc-story{padding:20px 20px;font-size:16px;line-height:2;color:var(--text);border-top:1px solid var(--border);background:rgba(56,189,248,.04)}
 .lc-task{padding:14px 16px;border-top:1px solid var(--border)}
 .lc-task-lbl{font-family:'Orbitron',sans-serif;font-size:10px;letter-spacing:2px;color:var(--gold);margin-bottom:10px}
 .lc-body{font-size:13px;line-height:1.8;color:var(--text)}
@@ -225,7 +225,7 @@ const CHAPTERS=[
   codeDigit:'8',
   phbl:'🌍 В реальной жизни: числовые закономерности — основа роста. Города планируют: если каждый год строить 7 домов — через 10 лет будет 70. Математика = инструмент развития.',
   insight:'🔢 Ты только что использовал математику так, как это делают строители и экономисты городов — чтобы планировать рост!',
-  story:'⚡ Рэй: «Мост в центр Технолэнда рассыпался! Каждая плита держится на задаче про наш город. Решите свои — и дорога откроется!»',
+  story:'🌉 Рэй: «Мост рассыпался... Каждая плита держится на числах. Кажется, вся надежда — на вас. Если не решите — дорога к серверу закрыта навсегда.»',
   taskDesc:'<p>У каждого игрока — своя задача про Технолэнд. Решите все четыре — и мост починится!</p>',
   players:[
     {name:'Игрок 1',icon:'🔵',lbl:'Задача про город',
@@ -255,7 +255,7 @@ const CHAPTERS=[
   codeDigit:'3',
   phbl:'🌍 В реальной жизни: дом — это алгоритм в камне. Сначала фундамент, потом стены, потом крыша. Язык точно описывает этот порядок.',
   insight:'🏠 Ты нарисовал дом по английской инструкции! Архитекторы именно так работают — передают чертежи на международном языке по всему миру.',
-  story:'🐕 Байт: «Жители забыли, как выглядит дом будущего! Нужно дать команду компьютеру нарисовать его — но он понимает только английский!»',
+  story:'🎨 Байт: «Улицы пусты. Жители смотрят на свои дома и не узнают их... Компьютер поможет — но только если получит команды на английском. Скорее!»',
   taskDesc:'<p>Каждый игрок рисует <strong>свои шаги</strong> алгоритма и переводит название фигуры. Потом <strong>Игрок 4</strong> считает фигуры на всех рисунках вместе!</p><p style="font-size:12px;color:var(--muted)">📌 Нужны листочки и карандаши.</p>',
   players:[
     {name:'Игрок 1',icon:'🔵',lbl:'Нарисуй шаги 1 и 2',
@@ -301,7 +301,7 @@ const CHAPTERS=[
   codeDigit:'7',
   phbl:'🌍 В реальной жизни: умножение — это модель роста. Одна идея × много людей = большой результат. Именно так работают команды в городах будущего.',
   insight:'⚡ Умножение — это не просто арифметика. Это принцип любого роста: маленькое действие, повторённое много раз, даёт большой результат!',
-  story:'🤖 Рэй мигает красным: «Реактор работает на закономерностях! Найдите правило в каждом ряду — и энергия вернётся в город!»',
+  story:'⚡ Рэй мигает: «Реактор задыхается! Я никогда не видел такой перегрузки. Только ваша математика охладит его — у каждого своя загадка. Быстрее!»',
   taskDesc:'<p>Каждый игрок исследует свою закономерность. Найдите правило — и продолжите ряд!</p>',
   players:[
     {name:'Игрок 1',icon:'🔵',lbl:'Найди правило и продолжи ряд',
@@ -326,12 +326,10 @@ const CHAPTERS=[
         <input class="inp inpsm" id="p2i" placeholder="?" inputmode="numeric" style="width:60px">
       </div>`,
      chk:()=>nrm(gv('p2a'))==='8'&&nrm(gv('p2i'))==='10',ans:'8 и 10'},
-    {name:'Игрок 4',icon:'🔴',lbl:'Найди закономерность — думайте вместе!',
-     html:`<div class="ptaskq">🔍 Ряд квадратов чисел. Найди правило:</div>
-      <div style="background:rgba(167,139,250,.07);border:1px solid rgba(167,139,250,.25);border-radius:10px;padding:12px 16px;margin:8px 0;font-family:'Orbitron',sans-serif;font-size:17px;font-weight:700;color:var(--purple);letter-spacing:2px;text-align:center">1, 4, 9, 16, 25, …</div>
-      <div style="font-size:13px;color:var(--muted);margin:4px 0">Следующее число (1², 2², 3², 4², 5²…):</div>
+    {name:'Игрок 4',icon:'🔴',lbl:'Загадка про город — думайте вместе!',
+     html:`<div class="ptaskq">🔍 Команда роботов несла детали для моста. Каждый из 4 роботов нёс одинаковое количество деталей. Всего деталей: 36. Сколько нёс каждый робот?</div>
       <input class="inp inpsm" id="p3i" placeholder="?" inputmode="numeric">`,
-     chk:()=>nrm(gv('p3i'))==='36',ans:'36 (6²=36)'},
+     chk:()=>nrm(gv('p3i'))==='9',ans:'9 (36÷4=9)'},
   ]
 },
 {
@@ -339,7 +337,7 @@ const CHAPTERS=[
   codeDigit:'3',
   phbl:'🌍 В реальной жизни: каждое утро ты выполняешь алгоритм. Без алгоритма — хаос. Города работают по тысячам алгоритмов одновременно.',
   insight:'💻 Ты только что составил алгоритм — как настоящий программист. Любое развитие идёт по шагам. Нет алгоритма — нет движения вперёд!',
-  story:'🐕 Байт: «Робот-строитель Технолэнда не знает, в каком порядке строить дом! Без правильного алгоритма город не восстановится. Помогите ему!»',
+  story:'💻 Байт: «Он просто стоит. Посреди улицы. Алгоритм нарушен — робот-строитель не сдвинется ни на шаг. Только вы можете восстановить порядок. Осторожно: всё на английском!»',
   taskDesc:'<p>Все задания — на английском языке! Восстановите алгоритм строительства дома в Технолэнде.</p>',
   players:[
     {name:'Игрок 1',icon:'🔵',lbl:'Find the mistake in the algorithm:',
@@ -377,7 +375,7 @@ const CHAPTERS=[
   codeDigit:'4',
   phbl:'🌍 В реальной жизни: ветвление — в светофорах, банкоматах, навигаторах. Цикл — в дворниках, мигалках, часах. Программирование — везде вокруг нас.',
   insight:'🔀 Ветвление = умение принимать решения. Цикл = привычка. Именно повторяемая практика — основа любого развития!',
-  story:'🤖 Рэй: «Роботы-стражи застыли — их программы содержат условия и повторения. Разберите алгоритмы и роботы оживут!»',
+  story:'🔀 Рэй: «Стражи застыли на развилке. Если — то — иначе. Повтори — снова — снова. Они не знают, что выбрать. Только вы можете расшифровать их программы.»',
   taskDesc:'<p>Каждый игрок разбирает свою часть: ветвление (ЕСЛИ…ТО…ИНАЧЕ) или цикл (ПОВТОРЯЙ N РАЗ).</p>',
   players:[
     {name:'Игрок 1',icon:'🔵',lbl:'Ветвление — что напишет робот?',
@@ -394,12 +392,12 @@ const CHAPTERS=[
      chk:()=>nrm(gv('p2i'))==='4',ans:'4'},
     {name:'Игрок 4',icon:'🔴',lbl:'Составь алгоритм — что получится?',
      html:`<div class="ptaskq">Робот выполняет эти команды по порядку:</div>
-      <div class="info-box">1. Шагнуть вперёд<br>2. Повернуть направо<br>3. Шагнуть вперёд<br>4. Повернуть направо<br>5. Шагнуть вперёд<br>6. Повернуть направо<br>7. Шагнуть вперёд</div>
+      <div class="info-box">1. Шагнуть вперёд<br>2. Повернуть направо<br>3. Шагнуть вперёд<br>4. Повернуть направо<br>5. Шагнуть вперёд<br>6. Повернуть направо<br>7. Шагнуть вперёд<br>8. Повернуть направо</div>
       <div style="margin-top:8px;font-size:13px;color:var(--text)">Какую фигуру нарисовал робот?</div>
       <div style="display:flex;flex-direction:column;gap:6px;margin-top:8px">
-        ${['Треугольник','Квадрат','Прямую линию','Круг'].map((v,i)=>`<label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:13px;background:rgba(45,212,191,.04);border:1px solid var(--border);border-radius:8px;padding:8px 10px"><input type="radio" name="p3r" value="${i}" style="accent-color:var(--a);flex-shrink:0"> ${v}</label>`).join('')}
+        ${['Треугольник','Квадрат','Прямую линию','Круг'].map((v,i)=>`<label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:13px;background:rgba(56,189,248,.04);border:1px solid var(--border);border-radius:8px;padding:8px 10px"><input type="radio" name="p3r" value="${i}" style="accent-color:var(--a);flex-shrink:0"> ${v}</label>`).join('')}
       </div>`,
-     chk:()=>{const r=document.querySelector('input[name="p3r"]:checked');return r&&r.value==='1';},ans:'Квадрат (4 стороны + 3 поворота)'},
+     chk:()=>{const r=document.querySelector('input[name="p3r"]:checked');return r&&r.value==='1';},ans:'Квадрат — 4 стороны по 1 шагу, 4 поворота направо'},
   ]
 },
 {
@@ -407,7 +405,7 @@ const CHAPTERS=[
   codeDigit:'4',
   phbl:'🌍 В реальной жизни: задача в два действия — это модель планирования. Сначала считаешь что было, потом что изменилось. Так работают мэры городов.',
   insight:'🏙️ Ты решил задачу в два действия — как планировщик города! «Было → изменилось → стало». Это и есть формула любого развития!',
-  story:'🤖🐕 Рэй и Байт вместе: «Вы добрались до главного сервера! Финальное испытание — и Технолэнд вспомнит своё слово!»',
+  story:'🏙️ Рэй и Байт: «Мы здесь. Главный сервер — прямо перед вами. Байт скулит от волнения. Одно последнее испытание — и город вспомнит своё слово. Только вместе!»',
   taskDesc:'<p>Финальное испытание: задачи в два действия про развитие Технолэнда!</p>',
   players:[
     {name:'Игрок 1',icon:'🔵',lbl:'Задача в 2 действия',
